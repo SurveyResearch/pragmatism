@@ -45,10 +45,12 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \usepackage[
-bibstyle=numeric,
+bibstyle=reading,%%numeric,
+entrykey=false,
 citestyle=authortitle,
 natbib=true,
-hyperref,bibencoding=utf8,backref=true,backend=biber]{biblatex}
+hyperref,
+bibencoding=utf8,backref=true,backend=biber]{biblatex}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -87,8 +89,12 @@ hyperref,bibencoding=utf8,backref=true,backend=biber]{biblatex}
 \date{\today}
 \bibliography{%
 ../bib/abstracts.bib,%
+../bib/anthro.bib,%
 ../bib/biology.bib,%
+../bib/brandom.bib,%
 ../bib/causality.bib,%
+../bib/cognitivism.bib,%
+../bib/embodiment.bib,%
 ../bib/em.bib,%
 ../bib/logic.bib,%
 ../bib/mind.bib,%
@@ -99,6 +105,8 @@ hyperref,bibencoding=utf8,backref=true,backend=biber]{biblatex}
 ../bib/misc.bib,%
 ../bib/measurement.bib,%
 ../bib/psychology.bib,%
+../bib/science.bib,%
+../bib/surveyresearch.bib,%
 ../bib/variables.bib,%
 ../bib/val.bib,%
 ../bib/validity.bib,%
@@ -129,6 +137,9 @@ hyperref,bibencoding=utf8,backref=true,backend=biber]{biblatex}
 \includeonly{%
 %% pilots,cards
 }
+
+\setlength{\epigraphwidth}{4in}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
@@ -254,10 +265,32 @@ or even very meaningful.
 
 \end{abstract}
 
+\begin{remark}
+  Readers familiar with Peter Winch's 1958 classic
+  \citetitle{winch_idea_1958} will recognize many of his themes in
+  what follows.  But much has changed since 1958.  In particular,
+  philosophers have elaborated detailed accounts of xyz, etc.  In
+  addition, Winch seems to have been unaware of Sellars'
+  \citetitle{sellars_empiricism_1997} (EPM).
+\end{remark}
+
+%%%%%%%%%%%%%%%%
 \section{\SR{}: The Received View}
 
-Field v. experimental science \parencite{ryan_replication_2011},
-\parencite{hurlbert_pseudoreplication_1984}
+\begin{abstract}
+  This section provides a schematic overview of the major features and
+  themes of the most common characterizations of \SR{}.  Along the way
+  it points out some problems which will be explicated in detail later
+  in the paper.  The purpose here is just to present a clear
+  exposition of what we're talking about.
+
+  Naturally a brief overview like this risks errors of ommision as
+  well as misrepresentation.  But I hope that most readers will find
+  it unobjectionable, or at least close enough for the purposes of
+  this paper (i.e. clarification and critique.)
+\end{abstract}
+
+\subsection{Status of \SR{}}
 
 \begin{remark}
 What is ``\SR{}''?  Two answers: research that \textit{uses} surveys
@@ -266,6 +299,8 @@ surveys.  First, each survey project studies something, or several
 things (each question being ``about'' something).  Second, \SR{} as a
 kind of meta-discipline studies surveys; usually this goes by
 ``\SMeth{}''.
+
+\SR{} counts as a field science, although many survey researchers attempt to conduct ``experiments''; more on this below.
 \end{remark}
 
 \begin{itemize}
@@ -278,26 +313,209 @@ kind of meta-discipline studies surveys; usually this goes by
 \item \SMeth: study of the use of questions to produce and collect data
 \end{itemize}
 
+\SR{} is more engineering discipline than science.  Like any
+engineering discipline, it \textit{uses} the results of science.  But
+unlike genuinely technological engineering disciplines, it cannot rely
+solely on scientific knowledge, since it studies human populations.
+In this respect it is like product design.  An engineer can design a
+functioning cell phone, but the design of a successful phone that
+people can easily use requires more than just engineering skill.  That
+sort of product design skill is more aesthetic than scientific
+(although it too may use science).
+
+There are two aspects here:
+
+\subsubsection{Sampling}
+
+The sampling side of \SR{} is indisputably scientific, in that it uses
+mathematical statistics.  However, it also relies on knowledge about
+people.
+
+\subsubsection{Interviewing}
+
+A common complaint among \SR{} investigators is that we lack good
+scientific models of the survey interview.  So we make do with
+whatever findings from psychology, sociology, etc. seem most useful.
+
 \subsection{The \SM{}}
+
+\begin{remark}
+  This is a model of survey interviewing, not \SR{}.
+\end{remark}
 
 Laboratory model: based entirely on (bad) analogy to the physical
 sciences.
 
+\begin{itemize}
+\item Telementation (information transfer) model of communication
+\item Thought-language dichotomy (Language of Thought model)
+\item Cognitivist-mentalist-computational model of thought
+\item Stimulus-Response model of question-answer interaction (discursive practice)
+\item Performance-Competence model of (skilled) behavior
+\item Lab rat model of respondent
+\item Lab technician model of interviewer
+\item Realist, representationalist model of meaning
+\item (or: Information model of meaning)
+\item Lab instrument (of measurement) model of questionnaire and questions
+\item ``Scientific method'' model of ``interview process''
+  (``standardized'' interviewing)
+\item Causal model of cognition and action
+\item Bilevel, appearance-reality model of phenomena (e.g. ``latent'' variables
+  as causes of observable phenomena, etc.)
+\end{itemize}
+
+\subsubsection{Cognitivist Model of Thought}
+
+\begin{remark}
+  TODO: overview of classic cognitivism and the standard
+  Tourangeau-Rips-Razinski model of the ``response process''.
+\end{remark}
+
+Two problems with the std cognitivist model.  One is that critics like
+Descombes have pretty much destroyed the classic cognitivist model,
+and cogsci itself has moved on (e.g. to situated/embedded/extended
+models); the other is that pragmatism has offered a radically
+different account of mindedness in general, which has no need of the
+classic cognitivist model.
+
+\begin{remark}
+  Critiques of classic cognitivism: Descombes, Dreyfus, etc. attack on
+  conceptual, logical, philosophical grounds; cognitive scientists
+  themselves forced to modify the classic model by empirical evidence
+  as well as theoretical/philosophical reasoning.  For example, a
+  wealth of evidence that the body plays a role in cognition forced a
+  reconsideration of the notion that cognition is mental/psychological.
+\end{remark}
+
+\begin{remark}
+  TODO: classic v. ``2nd wave'' cognitivism
+\end{remark}
+
+\subsubsection{Bilevel model}
+
+Evident in frequency of certain sorts of vocabulary in the \SR{}
+literature, especially theoretical or methodological literature.
+
+For example:
+
+\begin{itemize}
+\item interview \textit{process}
+\item response \textit{process}
+\item ``tapping'' underlying process etc.
+\item ``latent'' variables (required by this model, as causal factors)
+\item etc.
+\end{itemize}
+
+\begin{remark}
+  Such language presupposes and implicitly relies on a causal model of
+  behavior.  But the use of such language and its presuppositions is
+  virtually never explicitly addressed by survey researchers.  It is
+  almost always just accepted without critical examination.
+\end{remark}
+
 \subsection{The \XSM{}}
 
-XSM = SM plus interaction
+Two kinds of critics of the SM: radical and conservative.
+
+Radical critics argue that the whole thing is rotten and should be
+discarded.
+
+
+Conservative critics tend to admit that the whole thing \textit{may}
+be rotten, but they content themselves with trying to improve the
+existing model - hence, the \textit{Extended Standard Model} (XSM) of
+\SR{}.  The XSM extends the Standard Model by introducing notions of
+interaction and conversational dynamics.  But the conservative (or
+moderate) camp tends to be quite timid, and seems reluctant to follow
+through to the logical conclusion.  They treat \SR{} as something of a
+sacred cow.
+
+For example:
+
+\begin{quote}
+``One could study the standardized survey interview and conclude that
+  it does not work.\ldots{} \textit{This may be a justified
+    conclusion.  Conversation analytic studies make visible the weak
+    basis of the results of quantitative research.}  Nevertheless, I
+  adopt a more pragmatic [\textit{sic}] view and believe that modern
+  society cannot and will not do away with this efficient and
+  relatively inexpensive measuring instrument.  We should therefore
+  try to improve its quality.'' \parencite[Hanneke Houtkoop-Steenstra,
+    quoted in][p. 275]{potter_review_2003}
+\end{quote}
+
+\begin{remark}
+  Here ``pragmatic'' means something like practical, or likely to be
+  acceptable by today's researchers; it has nothing to do with the
+  philosophical pragmatism that is the topic of this paper.
+\end{remark}
+
+\begin{remark}
+  Note that H-S is only talking about ``standardized'' interviewing
+  technniques, not about the SM in general.  CA does expose problems
+  with standardized interviewing (``quantitative research''), but
+  pragmatism exposes problems at the more fundamental level of the SM
+  itself, of which standardized interviewing is only a component.
+
+  There seems to be little point in trying to trying to improve
+  something that ``does not work''.  If it is true (as it no doubt is)
+  that ``modern society cannot and will not do away with'' \SR{}, then
+  the better course of action is is to reconceptualize the enterprise
+  so that it does work.
+
+  The key question, if it does not work, is why.  If it can be shown
+  that it \textit{cannot} work, then trying to improve it would
+  obviously be pointless.  And on the pragmatist view (explicated
+  below), the SM not only cannot work, it is incoherent.
+\end{remark}
+
+\begin{remark}
+  The structure here, to be explicated in detail below, is analogous
+  to the semantics-pragmatics dichotomy: the Extended Standard Model
+  only augments the Standard Model.  The alternative, pragmatist
+  approach is to expose the irremediable problems with the Standard
+  Model, so that it becomes clear that the dichotomy is only apparent.
+\end{remark}
 
 \subsection{Survey Methodology}
 
 Monism v. pluralism.
 
+\subsection{Problems}
+
+\begin{itemize}
+\item Failure to distinguish space of reasons and space of laws
+\item Over-reliance on cognitivism
+\item Physics envy
+\item Failure to distinguish between philosophical and scientific ``stuff''
+\item ...
+\end{itemize}
+
 %%%%%%%%%%%%%%%%
 \section{Pragmatism}
 
 \epigraph{Consider what effects, that might conceivably have practical bearings, we conceive the object of our conception to have. Then our conception of these effects is the whole of our conception of the object.}
-{CS Peirce (CP5.402)}
+{``The Pragmatic Maxim'' \\ CS Peirce (CP5.402)}
 
-``Although the term pragmatism is frequently used to characterize some or other highly specific thesis or program, pragmatism is not and never was a school of thought unified around a distinctive doctrine.'' talisse 1
+\begin{remark}
+  Three ways to proceed: 1. critical: present some strawmen and show
+  how pragmatism knocks them down (e.g. representationalism,
+  cognitivism, etc.); 2.  constructive: say what pragmatism is,
+  without worrying about what it isn't or what it says about competing
+  ideas; 3. present some issues or ``problems'' or themes, and discuss
+  the various options on offer for addressing them, highlighting the
+  pragmatist ones.  The latter is generally Brandom's strategy, and it
+  makes for a more irenic, fair presentation.  Knocking down strawmen
+  is fun, but runs the risk of aiming at the wrong
+  targets.
+\end{remark}
+
+\begin{remark}
+  ``But on the other hand, `we' all know that when we look and see, when we carefully scrutinize what is bunched together under the rubric of any of these `isms,' we discover assertions, theses, and positions which are conflicting, contradictory, and sometimes incommensurable with each other.  Even those attempts to sort out the varieties of these "isms" are themselves highly contested. So it might seem prudent to drop all `ism' talk and say what we mean without relying on these unstable crutches.  Yet despite all cautionary warnings, we also have a sense that no matter how vague and ambiguous these `ism' expressions are, they can do some important work for us. They enable us to gesture toward philosophic orientations and approaches that do share family resemblances and do have significant consequences.  At the very least, we should avoid falling into the trap of thinking that whenever someone uses one of these contested `ism' terms `we'--more or less--know what is meant.  It is advisable to adopt the maxim that we should always scrutinize what precisely is being said (and unsaid) when someone appeals to any of these `isms.'''  \parencite[57]{baert_towards_2005}
+\end{remark}
+
+
+``Although the term pragmatism is frequently used to characterize some or other highly specific thesis or program, pragmatism is not and never was a school of thought unified around a distinctive doctrine.'' \parencite[1]{talisse_pragmatism_2011}
 
 ``As a kind of naturalism, pragmatism is partly a thesis about the
 relation of philosophy to the natural sciences; consequently, one
@@ -313,19 +531,119 @@ naturalistic and variously humanistic accounts of philosophical
 problems and solutions. One of the reasons as to the variety of
 pragmatisms is the variety of humanisms available to pragmatists.''
 talisse 5
+
+Related: ``the practice turn'' in social theory; interactionism;
+dialogism.
+
+\subsection{Historical perspective}
+
+We have the Cartesian, rationalist tradition, and the Romantic,
+hermeneutic tradition.  Pragmatism is distinct from both, maybe
+because it was so heavily influenced by evolutionary and statistical
+thinking.
+
+\subsubsection{Enlightenment and Counter-Enlightenment}
+
+Descartes, Locke, etc.
+
+Vico, Hamann, Herder, etc.
+
+\subsubsection{Analytic and Continental}
+
+In the 20th century (western) philosophy split into the ``analytic''
+(mostly Anglophone) and ``continental'' traditions whose practitioners
+tended not to talk to each other (much).  Recently this split has been
+closing; pragmatism is enjoying a major reinvigoration not only in
+Anglophone philosophy departments but throughout Europe.
+
+\begin{remark}
+  Pragmatism was distinct from both, and for a period at least treated
+  with considerable disdain (both Russell and Heidegger had some
+  snotty things to say about it.)  A common narrative has it that
+  pragmatism went into eclipse in the mid-20th century, when it lost
+  out to logical empiricism, but in fact it never really went away;
+  people just didn't use the label.  See the introduction of
+  \cite{bacon_pragmatism:_2012} for a good historical overview.
+\end{remark}
+
+Examples: Descombes, Brandom, both of whom consciously attempt to
+reconcile the two traditions.
+
+
+Brandom's Geneology of Pragmatism
+
+Brandom traces pragmatism back to Kant.  The lineage runs from Kant
+through Hegel, to the American Pragmatists, with branches to the
+Heidegger of ?? and the Wittgenstein of
+\cite*{wittgenstein_philosophical_2009}, and on to such recent figures
+as Quine, Davidson, Putnam, Rorty, etc..
+
+The Continental Tradition
+
+\begin{remark}
+    Oddly, Brandom has almost nothing to say about Vico.  Maybe that is because he focuses on the anglophone analytic tradition.
+\end{remark}
+
+From Vico to Herder to Foucault, Derrida (etc.)
+
+What about structuralism (Descombes)?
+
+Contemporary pragmatism is conventionally taken to begin with the
+great American triumvirate of Peirce, James, and Dewey, but its roots
+extend much further back.  Descartes is the great \textit{bete noir}
+of most pragmatists, and although Cartesianism came to dominate
+philosophical thought it was never unchallenged.  Vico stands out as
+an early opponent of Cartesian scientism and defender of humanistic
+learning.  For him, science is a matter of geneology; hence his famous
+slogan \textit{verum factum}.  We learn what something is by studying
+how it came to be.
+
+Vico: ``verum et factum convertuntur, that “the true and the made
+are...convertible,” or that “the true is precisely what is made”
+(verum esse ipsum factum).'' \parencite{costelloe_giambattista_2012}
+
+\begin{remark}
+  Vico, Nietsche, Foucault, etc. - the ``geneological'' tradition.
+  This is a history that can be trace as a counterweight to the
+  history of cognitivist/empiricist tradition (Descartes, Locke, Hume,
+  etc. up through Chomsky, Fodor, etc.)  How much of this do we need
+  to cover?  It's mainly of historical interest, but conceptually this
+  is of a piece with pragmatism.
+\end{remark}
+
+\cite{lollini_becoming_2012}
+
+\cite{egginton_pragmatic_2004}
+
 \subsection{Major Themes}
 
 Negative and positive.
 
 \begin{itemize}
-\item anti-foundationalism
-\item anti-representationalism
-\item normativity
-\item inferentialism
-\item expressivism
-\item cognitivism, mentalism
-\item naturalism
-\item evolution \& statistics
+\item Pro:
+  \begin{itemize}
+  \item normativity
+  \item inferentialism
+  \item expressivism
+  \item semantic externalism
+  \item meaning holism
+  \item naturalism
+  \item language
+  \item social cognition (v. atomism)
+  \item evolution \& statistics
+  \end{itemize}
+\item Con:
+  \begin{itemize}
+  \item causal, nomological basis of action
+  \item foundationalism
+  \item essentialism
+  \item representationalism
+  \item cognitivism
+  \item mentalism
+  \item cognitive/semantic internalism
+  \item atomism
+  \item methodological individualism
+  \end{itemize}
 \end{itemize}
 
 ``Quine’s corpus presents an ongoing development of a few key
@@ -334,9 +652,199 @@ ontology, and an attempt to fit them together. Importantly, Quine
 proceeds by way of critical engagement with nonnaturalist critics and
 interlocutors....the case for pragmatism was to be made on a
 case-by-case basis, not by way of a comprehensive philosophical
-system.'' Talisse intro p. 8-9
+system.'' \parencite[8-9]{talisse_pragmatism_2011}
 
-\subsection{The Strategy}
+\subsubsection{Practice}
+\subsubsection{Normativity}
+\subsubsection{Inferentialism}
+\subsubsection{Expressivism}
+
+\subsubsection{Deflationism}
+
+Semantic and ontological deflationism, aka minimalism.
+
+\subsubsection{Semantic Externalism}
+
+\subsubsection{Language as Discursive Practice}
+
+\subsubsection{Meaning Holism}
+\subsubsection{Primacy of the Social}
+\subsubsection{Evolution \& Statistics}
+
+\subsubsection{Naturalism, Mind, Beliefs}
+
+\epigraph{
+%% She sang beyond the genius of the sea.
+%% The water never formed to mind or voice,
+%% Like a body wholly body, fluttering
+%% Its empty sleeves; and yet its mimic motion
+%% Made constant cry, caused constantly a cry,
+%% That was not ours although we understood,
+%% Inhuman, of the veritable ocean.
+%% \vspace{4pt}
+%% The sea was not a mask.  No more was she.
+%% The song and water were not medleyed sound
+%% Even if what she sang was what she heard.
+%% Since what she sang was uttered word by word.
+%% It may be that in all her phrases stirred
+%% The grinding water and the gasping wind;
+%% But it was she and not the sea we heard.
+%% \vspace{4pt}
+%% For she was the maker of the song she sang.
+%% The ever-hooded, tragic-gestured sea
+%% Was merely a place by which she walked to sing.
+%% Whose spirit is this?  we said, because we knew
+%% It was the spirit that we sought and knew
+%% That we should ask this often as she sang.
+%% \vspace{4pt}
+%% If it was only the dark voice of the sea
+%% That rose, or even colored by many waves;
+%% If it was only the outer voice of sky
+%% And cloud, of the sunken coral water-walled,
+%% However clear, it would have been deep air,
+%% The heaving speech of air, a summer sound
+%% Repeated in a summer without end
+%% And sound alone.  But it was more than that,
+%% More even than her voice, and ours, among
+%% The meaningless plungings of water and the wind,
+%% Theatrical distances, bronze shadows heaped
+%% On high horizons, mountainous atmospheres
+%% Of sky and sea.
+%% \vspace{4pt}
+\hspace{12pt}It was her voice that made\\
+The sky acutest at its vanishing.\\
+She measured to the hour its solitude.\\
+She was the single artificer of the world\\
+In which she sang.  And when she sang, the sea,\\
+Whatever self it had, became the self\\
+That was her song, for she was the maker.  Then we,\\
+As we beheld her striding there alone,\\
+Knew that there never was a world for her\\
+Except the one she sang and, singing, made.\\
+%% \vspace{4pt}
+%% Ramon Fernandez, tell me, if you know,
+%% Why, when the singing ended and we turned
+%% Toward the town, tell why the glassy lights,
+%% The lights in the fishing boats at anchor there,
+%% As night descended, tilting in the air,
+%% Mastered the night and portioned out the sea,
+%% Fixing emblazoned zones and fiery poles,
+%% Arranging, deepening, enchanting night.
+%% \vspace{4pt}
+\ldots \\
+Oh!  Blessed rage for order, pale Ramon,\\
+The maker's rage to order words of the sea,\\
+Words of the fragrant portals, dimly-starred,\\
+And of ourselves and of our origins,\\
+In ghostlier demarcations, keener sounds.
+}
+{\textit{The Idea of Order at Key West} \\
+\textsc{Wallace Stevens}}
+
+``The maker's rage to order words of the sea\ldots{} and of ourselves
+and of our origins'': the Cartesianist suffers from a delusion: he
+thinks that his task is to \textit{discover} order in our doings, an
+order that is not our doing.  He yearns to find intentionality in
+inner states, to reduce the human to the physical, etc.  The
+pragmatist too is seized by ``the maker's rage to order'', but like
+the narrator of Stevens' great poem, has no illusions about the source
+of the order we perceive.  It is \textit{our} order, an order we
+\textit{make}.
+
+\subsection{Second-generation Cognitivism}
+
+\begin{remark}
+  Second (and third) generation cognitivism (I take 3rd gen to refer
+  to models in which the social plays an essential role) seems to be
+  moving clearly in the general direction of some kind of pragmatist
+  orientation.  Especially ``enactive'' models.
+\end{remark}
+
+What distinguishes pragmatism from 2nd and 3rd generation cognitivism?
+
+Pragmatism - or at least the sort of \textit{rational} pragmatism
+elaborated by Brandom - does not sweat the details of the sub- or
+pre-conceptual systems studied (postulated) by cognitivists.
+Obviously cognition depends on some kind of physical causal basis.
+One needs a brain to think.  Some 2nd generation cognitivist models
+extend this idea and claim that the sort of thinking of which humans
+are capable also requires extra-cranial bodies; for example, some
+argue that gesture forms the basis of cognition, and more radical
+models propose that extra-bodily phenomena such as pencils and
+computers should be counted as components of cognition.  But for the
+pragmatist this is beside the point; conceptual activity occurs in the
+space of reasons, which is distinct from the space of nature and laws.
+So the details of just how we as physical creatures are able to think
+are not important or even relevant to the primary question of just
+what counts as thinking.  That is a conceptual issue rather than a
+scientific one.
+
+The tricky bit for pragmatism is how to account for the move from the
+sub-conceptual, law-governed world of (preconceptual) sentience to the
+conceptual, rational world of (conceptual) sapience.  There are
+several theories on offer for this.  McDowell argues that perception
+is always already conceptually structured; Brandom denies this.  Etc.
+Either way, the real issue is what to say about concept use in the
+space of reasons, regardless of what science may have to say about the
+physical basis upon which concept use depends.  And this is a
+philosophical rather than a scientific endeavor.  Not that philosophy
+can ignore science; pragmatism in general is enthusiastically
+naturalistic and happy to defer to science where necessary.  But
+science cannot tell the whole story.  In particular, it cannot tell us
+what counts as concept use (rationality).
+
+\begin{remark}
+This seems too strong.  Price might argue that science can tell us a
+great deal about the role that concepts play in our lives.  But you
+have to have concepts already before you can undertake that sort of
+scientific investigation.
+\end{remark}
+
+\begin{remark}
+  This is also related the the question of naturalism, another major
+  theme in pragmatism.  The space of reasons seems to be distinct from
+  the natural space of laws and causes.  So one challenge for
+  pragmatism is to provide a naturalistic account of the space of
+  reasons.  Price is good on this.
+\end{remark}
+
+\subsection{Tasks \& Strategies}
+
+\epigraph{
+I wake to sleep, and take my waking slow.\\
+I feel my fate in what I cannot fear.\\
+I learn by going where I have to go.\\
+\vspace{4pt}
+We think by feeling. What is there to know?\\
+I hear my being dance from ear to ear.\\
+I wake to sleep, and take my waking slow.\\
+\vspace{4pt}
+Of those so close beside me, which are you?\\
+God bless the Ground!   I shall walk softly there,\\
+And learn by going where I have to go.\\
+\vspace{4pt}
+Light takes the Tree; but who can tell us how?\\
+The lowly worm climbs up a winding stair;\\
+I wake to sleep, and take my waking slow.\\
+\vspace{4pt}
+Great Nature has another thing to do \\
+To you and me; so take the lively air,\\
+And, lovely, learn by going where to go.\\
+\vspace{4pt}
+This shaking keeps me steady. I should know. \\
+What falls away is always. And is near. \\
+I wake to sleep, and take my waking slow. \\
+I learn by going where I have to go.}{``The Waking''\\
+\textsc{Theodore Roethke}}
+
+``Task'' instead of ``object of study''; ``Strategy'' instead of
+``methodology''.  To talk of an object of study would be to
+prematurely presuppose that such an object exists and is identifiable
+as such.  But pragmatism makes no such presupposition; it learns by
+going where it needs to go.
+
+``The task of constructing fully and genuinely post-Cartesian concepts
+of concepts and their contents is one we have only begun.'' \parencite[252]{brandom_descombes_2004}
 
 Brandom, Price, etc. adopt similar analytic/explanatory strategies which have
 their roots in Peirce's Maxim.
@@ -349,6 +857,45 @@ their roots in Peirce's Maxim.
 
 As noted above, such an approach is bound to appeal to facts about usage. It will tell us under what circumstances speakers use the locutions concerned, and what functions this use serves in the speech communities concerned. But instead of analysing facts about meaning in terms of facts about use, it explains our talk of meanings, and tells us what habits of usage underlie such a discourse.'' same, p. 115
 
+\subsection{Critical aspects}
+
+\begin{remark}
+To complement the positive account of pragmatism above, this section
+will give an account of pragmatism's criticism of some of the themes
+to which it stands in opposition.
+
+Alternatively, we might prefer to integrate this material in the
+thematic sections above, so both critical and constructive
+perspectives presented together for each theme.
+\end{remark}
+
+\subsubsection{Representation}
+
+\epigraph{ [T]he chief service of pragmatism, as regards epistemology,
+  will be to give the \textit{coup de grace} to representationalism.}
+         {Dewey, letter to Charles Augustus Strong, 1905, quoted in Menand}
+
+Virtually all pragmatists are anti-representationalists
+
+\subsubsection{Mentalism}
+
+In general, pragmatism is anti-mentalistic.  Strong versions deny that
+minds exist.  Etc.
+
+\subsubsection{False Dichotomies}
+
+\begin{itemize}
+\item quantitative v. qualitative ``variables''
+\item Reality-appearance, overt-covert, observable-hidden,
+  manifest-latent, etc. ; true-false; etc.; ``hidden'' laws,
+  processes, entities ``underlying'' observables, etc.
+\item Analytic-Synthetic (Quine)
+\item Fact-Value (Putnam)
+\item Qualitative-Quanitative
+\item Word-World
+\item Semantics-Pragmatics
+\item Performance-Competence
+\end{itemize}
 
 \subsection{Brandom}
 
@@ -357,6 +904,9 @@ thorough exposition in Robert Brandom's masterpiece \enquote{Making It
   Explicit}\footnote{\MIE{} is over 600 pages of close argument covering most of the philosophical topics of interest to \SR{}.  For a more manageable introduction to Brandom's ideas see his \parencite{brandom_precis_1997}, \parencite{brandom_articulating_2001}.  See also \parencite{brandom_perspectives_2011}, \parencite{brandom_reason_2009}, and \parencite{brandom_between_2008}.}.
 
 \subsubsection{Sellars: Myth of the Given, Space of Reasons}
+
+
+Natural space of causes (laws), discursive space of reasons
 
 \subsubsection{Sellars: Language Entries}
 
@@ -429,11 +979,6 @@ denizens of the Space of Reasons.
   performance (``I'm five'') is correct.
 \end{remark}
 
-\subsection{Normativity}
-
-The Space of Reasons is a normative space of reasons, not a natural
-(causal) space of laws.
-
 \subsection{Vocabularies}
 
 Measurement as description.  Description v. evaluation.  Price on
@@ -488,10 +1033,10 @@ naturalisms.  The bifurcation thesis.
 \cite{price_two_2013} \\
 \cite{putnam_representation_1991} \\
 \cite{putnam_collapse_2002} \\
-\cite{putnam_three_2009}
+\cite{putnam_three_2009} \\
 \cite{rorty_method_1981} \\
 \cite{rorty_representation_1988} \\
-\cite{rorty_PMN} \\
+\cite{rorty_pmn} \\
 \cite{schatzki_practice_2001} \\
 \cite{sellars_empiricism_1997} \\
 \cite{tate_foucault_2007} \\
@@ -500,13 +1045,189 @@ naturalisms.  The bifurcation thesis.
 \cite{zimmerman_review_1994}
 
 %%%%%%%%%%%%%%%%%%%%
-\section{Science}
+\section{Science and Scientism}
 
 \begin{remark}
   Q: What does Pragmatism have to say about science, and why should we
   care?  A: Philosophy as therapy (Rorty) or edification
   (Wittgenstein?).  Exposure of unexamined presuppositions and
   consequences, etc.
+\end{remark}
+
+\begin{remark}
+  Science as source of \textit{authority} -  epistemic and otherwise. 
+\end{remark}
+
+\subsection{The Demarcation Problem}
+
+\begin{abstract}
+  This section reviews the demarcation problem: what distinguishes
+  science from non- (pseudo-, cargo cult, ...) science?
+\end{abstract}
+
+\subsection{Description, Prediction, Action}
+
+\epigraph{%
+Last evening the moon rose above this rock \\
+Impure upon a world unpurged. \\
+The man and his companion stopped \\
+To rest before the heroic height. \\
+\vspace{4pt}
+Coldly the wind fell upon them \\
+In many majesties of sound: \\
+They that had left the flame-freaked sun \\
+To seek a sun of fuller fire. \\
+\vspace{4pt}
+Instead there was this tufted rock \\
+Massively rising high and bare \\
+Beyond all trees, the ridges thrown \\
+Like giant arms among the clouds. \\
+\vspace{4pt}
+There was neither voice nor rested image, \\
+No chorister, nor priest. There was \\
+Only the great height of the rock \\
+And the two of them standing still to rest. \\
+\vspace{4pt}
+There was the cold wind and the sound \\
+It made, away from the muck of the land \\
+That they had left, heroic sound \\
+Joyous and jubilant and sure.%
+}{``How to Live. What to Do.''\\
+Wallace Stevens}
+
+
+Rorty's complaint: science cannot tell us what to do, but scientism
+thinks it can.
+
+``To sum up this point: there are two distinct desiderata for the vocabulary of the social sciences:
+(1) It should contain descriptions which permit prediction and control
+(2) It should contain descriptions which help one decide what to do.''
+\cite[p. 75]{rorty_method_1981}
+
+\cite{rorty_representation_1988}
+
+\subsection{Naturwissenschaften}
+
+\begin{abstract}
+  A concise survey of those features of ``hard'' science that figure
+  prominently in the \SR{} literature.  One purpose is to clarify the
+  ways in which \SR{} tries to mimic other sciences.
+\end{abstract}
+
+\subsubsection{Measurement}
+\subsubsection{Replicability}
+\subsubsection{etc.}
+
+\subsubsection{Experimental and Field Science}
+
+Radicals may insist that replicable experimentation is essential to
+science.  But in astronomy, paleontology, and various other ``field''
+sciences, replicable experiments are impossible; does this mean they
+are not genuine sciences?  The answer for virtually any reputable
+scientist, I hazard to guess, is no: they are in fact scientific
+disciplines.
+
+Then there is biology, which involves both experimental and field
+research.  Molecular biologists surely conduct genuine experiments;
+even evolutionary biologists can investigate evolution by conducting
+small-scale experiments.
+
+Then there is the question of simulation.  With the advent of
+inexpensive computation, scientists in virtually any field can use
+computational simulations to model the real world; does this
+non-empirical research count as genuine science?
+
+The point of these considerations is to open up space for a broader
+notion of what counts as genuine science.  The idea is that we can
+then accomodate the social (or human, etc.) sciences as genuinely
+scientific \textit{without} mimicking physics or biology or any other
+science.
+
+Or: science as a plurality.  There is no one scientific method that
+allows us to distinguish between science and non-science.  Instead,
+each science must discover (that is, construct) its own methods.
+
+This means, among other things, that \SR{} need not concern itself
+overmuch with interviews as quantitative measurement.  At least not
+antecedently; quantitative measurement may be appropriate, in the
+right circumstances, but it should not be antecedently imposed as a
+criterion of adequacy.  \SR{} interviews can be useful and fully
+scientific \textit{even if they do no measuring}.
+
+\begin{remark}
+  This is not news; that there is no One True Scientific Method has
+  been widely recognized for decades if not centuries.  Many recent
+  students of science have explicitly addressed this, most obviously
+  Kuhn, Lakatos, Feyerabend, etc.
+
+  So what is the point of bringing this up?  Just clarity, mainly.  In
+  the \SR{} literature, as far as I can tell, these issues are rarely
+  explicitly addressed.  Many papers on \SR{} ``experiments'' have
+  been published, but I have yet to find a detailed examination of why
+  we should deem the research described as experimental.  Indeed it
+  seems clear that a good deal of this research fits Feynman's
+  definition of Cargo Cult Science.  In order to get clear about
+  exactly what \SR{} is (and what it is not), how it should (should
+  not) be conducted, etc. such considerations are essential and should
+  be as explicit as possible.
+\end{remark}
+
+\parencite{ryan_replication_2011}
+
+\parencite{hurlbert_pseudoreplication_1984}
+
+\subsection{Geisteswissenschaften: the Two Traditions}
+
+\begin{abstract}
+  The two traditions are philosophical; what is the relevance to
+  science?  If we were talking about \textit{Naturwissenschaften},
+  say, physics, the relevance would be minimal.  But that's not the
+  case with the human sciences.  One of the problems with them is that
+  they have always had trouble disentangling the scientific from the
+  philosophical.  So the purpose of this section is to at least sketch
+  the main themes that have played important roles in the human
+  (social) sciences.  And the reason that is useful is because it
+  helps us place Pragmatism in a conceptual space as well as a
+  historical context.  Which in turn will help us better to grasp the
+  significance of Pragmatism for \SR{}.
+\end{abstract}
+
+\begin{remark}
+  Winch - tracing social science to Mill, etc. - the analytic branch?
+\end{remark}
+
+\begin{remark}
+  Sociology v. anthropology?  Different lineages?
+\end{remark}
+
+\begin{remark}
+  ``Social physics'' - Comte?
+\end{remark}
+
+\subsubsection{The Analytic Tradition}
+
+\begin{remark}
+  Does this belong under Geisteswissenschaften?  Yes, insofar as it is
+  a philosophical program.  But empiricism is obviously ``about'' the
+  natural sciences.
+\end{remark}
+
+French Rationalism $+$ English Empiricism $=$ Logical Empicism
+
+\subsubsection{The Hermeneutic Tradition}
+
+``Continental'' - Herder, Hegel, ... Foucault, Derrida, ...
+
+\cite{forster_herder_2010}
+
+\subsection{Scientism}
+
+\begin{remark}
+  Putnam: ``science-worship''
+\end{remark}
+
+\begin{remark}
+  Scientism as imperialistic Naturwissenschaften?
 \end{remark}
 
 \begin{remark}
@@ -536,7 +1257,71 @@ naturalisms.  The bifurcation thesis.
   as the model science.
 \end{remark}
 
-\subsection{From Empiricism to Pragmatism}
+\cite{pinker_science_2013}
+
+\cite{wieseltier_crimes_2013}
+
+\cite{pinker_why_2004}
+
+\cite{rorty_philosophy-envy_2004}
+
+\subsubsection{Physics Envy}
+
+  For a long time physics was the model science; it is now being
+  displaced by biology as the new model science.  But why should the
+  human sciences try to mimic other sciences?  Why not treat them as
+  legitimage sciences in their own right?
+
+  Part of the problem is the notion that quantitative measurement is
+  the gold standard.  No quantitative measurement, no science.  But
+  why did people come to think that?  Probably because of the dazzling
+  success of quantitative sciences like physics.  But this is a false
+  idol; there is nothing intrinsic to quantitative measurement or the
+  ``scientific method'' that that can tell us that quantitative
+  measurement is essential to science.  In other words, science cannot
+  set its own demarcational criteria; they must come from outside of
+  science.  Just because physics is grounded in quantitative
+  measurement does not mean that quantitative measurement demarcates
+  science.  You can do perfectly good science without measurement.
+  Should we not count the anthropologists analysis and description of
+  myth and ritual as science?  In the end it is about the production
+  of knowledge, by whatever means.
+
+  Science as critical, rational thinking (analysis, but also
+  imagination) v. replicable experiments v. field science.  Consider
+  the example of philology, which was the model for science in the
+  19th century.  Philology is not about discovering laws of nature (or
+  of man or society), but about acquiring knowledge of languages and
+  texts.  It is (was?) highly disciplined, rational, critical, etc. -
+  it has all the characteristics of scientific thinking, but it does
+  not have replicable experiments.  It involves very detailed
+  collection and analysis of data, construction and ``testing'' of
+  hypotheses, is open to revision, and so forth - all the things that
+  science has, except for laboratory experiments.
+
+  Ditto for the ``field sciences'' like paleontology, astronomy, etc.
+
+  The point of reviewing the ways in which different research topics
+  and programs count as science is to buttress the suggestion that the
+  human sciences generally and social sciences in particular should
+  spend a lot less energy trying to mimic the ``hard'' sciences.
+  Instead they should concentrate on what can make them scientific in
+  their own right, on answering the normative question of what counts
+  as good science in the study of things human.
+
+  This inevitably involves philosophical questions of the sort that
+  help us draw the distinction between philosophy and science.
+
+\subsection{Pragmatism and Science}
+
+\begin{abstract}
+  Pragmatism has been intimately connected to science from the very
+  beginning; esp. evolution and statistics. (see Brandom) It has to
+  potential to unify Geistes- and Naturwissenschaften. (see Price on
+  global expressivism, pragmatism about causation, etc.)
+\end{abstract}
+
+From Empiricism to Pragmatism
 
 Sellars, Quine, Wittgenstein and the demolition of Empiricism.
 
@@ -561,23 +1346,42 @@ This can be illustrated in the history of temperature measurement,
 where theory and its relation to measurement practice played the
 decisive role.
 
-\subsection{Price: Global Expressivism}
+\begin{remark}
+  For the moment this is organized by figure.  It would probably be
+  better to organize it by theme.
+\end{remark}
 
-From Rorty to Price: science as one among many vocabs, with no special
-claim to authority.
+\subsubsection{Peirce, James, Dewey}
 
-\subsection{Measurement}
+\subsubsection{Quine}
 
-\begin{abstract}
-Measurement pragmatism.  No representation needed.
-\end{abstract}
+\subsubsection{Putnam, Davidson?}
 
-\subsection{False Dichotomies: quantitative v. qualitative ``variables''}
+\subsubsection{Rorty}
 
+Science as one among many vocabs, with no special claim to authority.
 
+\begin{remark}
+  Rorty on ``value-free'' and ``hermeneutic'' social science. \cite{rorty_method_1981}
+\end{remark}
+
+\subsubsection{Price}
+
+\begin{remark}
+Price's global expressivism: all vocabularies, including empirical
+vocabularies, are expressive rather than descriptive.  Significance of
+this for \SR{}, esp. measurement.
+\end{remark}
+
+\begin{remark}
+  Price's pragmatism about causality: causes are not in nature.  Our
+  cause talk reflects our position in the world and our need to
+  intervene and cope.  Significance for \SR{}, esp. for the causal
+  models common to most orthodox \SR{}.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%
-\subsection{Deflating Validity}
+\subsubsection{Deflationism}
 
 \begin{abstract}
 Semantic and metaphysical deflationism works as well for validity as
@@ -589,9 +1393,15 @@ it does for truth and reference.
   expressivism.  Or maybe they amount to the same thing?
 \end{remark}
 
+\begin{itemize}
+\item Deflationism about truth
+\item Deflationism about validity
+\item Deflationism about quantities
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Causality and the Space of Reasons}
+\subsubsection{Causality and the Space of Reasons}
 
 \begin{abstract}
 abstract
@@ -609,28 +1419,9 @@ abstract
 \cite{morris_causes_1986} \\
 \cite{williamson_broadness_1998}
 
-\subsubsection{Conflation of Causal and Logical Relations}
+\subsubsection{Hypothetical Entities}
 
-
-\subsection{False Dichotomies}
-
-Reality-appearance; true-false; etc.
-
-\subsubsection{Analytic-Synthetic (Quine)}
-\subsubsection{Fact-Value (Putnam)}
-\subsubsection{Qualitative-Quanitative}
-\subsubsection{Word-World}
-
-\subsection{Hypothetical Entities}
-
-\subsection{Personal v. Subpersonal}
-
-
-\subsection{Spaces}
-
-\subsubsection{Natural space of causes}
-
-\subsubsection{Discursive space of reasons}
+\subsubsection{Personal v. Subpersonal}
 
 %%%%%%%%%%%%%%%%
 \section{Reconciliation: A Pragmatic Model of Survey Research}
@@ -832,8 +1623,177 @@ rather than a person.
 
 
 \clearpage
-\appendix
-\begin{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix\begin{appendices}
+
+\section{Recommended Reading}
+
+For readers unfamiliar with contemporary pragmatism:
+
+\begin{enumerate}
+\item \cite{bacon_pragmatism:_2012}
+\item \cite{brandom_perspectives_intro_2011}
+\item \cite{putnam_three_2009}
+\item \cite{quine_two_1951}
+\item \cite{sellars_empiricism_1997}
+\item \cite{davidson_nice_2005}
+\item \cite{putnam_collapse_2002}
+\item \cite{rorty_pmn}
+\item \cite{brandom_articulating_2001}
+\item \cite{price_expressivism_2011}
+\item \cite{price_truth_2003}
+\end{enumerate}
+
+
+\subsection{Pragmatism - Overviews}
+\begin{description}
+\item [\cite{bacon_pragmatism:_2012}]  A good overview of contemporary pragmatism, covering Quine, Putnam, etc.  Probably the best place to start for those unfamiliar with contemporary pragmatism.
+\item [\cite{bernstein_pragmatic_2010}]
+\item [\cite{brandom_perspectives_2011}]
+\item [\cite{dickstein_revival_1998}]
+\item [\cite{kraut_varieties_1990}]
+\item [\cite{putnam_pragmatism_1995}]  Addresses what pragmatism has to say about verificationism.
+\item [\cite{schatzki_practice_2001}]
+\end{description}
+
+\subsection{Pragmatism Readers}
+
+Many collections of writings from the Pragmatist tradition have been
+published.  Here are just a few:
+
+\begin{description}
+\item [\cite{menand_pragmatism_1997}]
+\item [\cite{haack_pragmatism_2006}]
+\item [\cite{misak_new_2007}]
+\item [\cite{talisse_pragmatism_2011}]
+\end{description}
+
+\subsection{(Anti-) Cognitivism}
+
+\epigraph{[C]ognitivism, as an account of human thought and understanding, is deeply false.}{\cite{haugeland_closing_2004}}
+
+\subsubsection{Classic Cognitivism}
+
+``Classic'' or first generation cognitivism is characterized by three
+ideas: computation, representation, and the mental.  Roughly,
+cognition is construed as mental computational processing of
+representations (symbols).
+
+\begin{description}
+\item [\cite{descombes_minds_2001}] A major and devastating critique
+  of classic cognitivism.  Descombes' positive account of
+  ``mindedness'', intentionality, etc. dovetails quite nicely with
+  Brandom's; see \cite{brandom_descombes_2004} and
+  \cite{descombes_replies_2004}
+\item [\cite{brandom_cog_2009}]
+\item [\cite{brandom_descombes_2004}]  Comment on \cite{descombes_minds_2001}
+\item [\cite{fodor_language_1979}]  The classic philosophical account of cognitivism.
+\item [\cite{fodor_lot_2010}]
+\item [\cite{haugeland_closing_2004}]  Comment on \cite{descombes_minds_2001}
+\item [\cite{rorty_brain_2004}]  Comment on Descombes
+\item [\cite{taylor_descombes_2004}]  Comment on Descombes
+\item [\cite{descombes_replies_2004}]  Replies to comments
+\item [\cite{kitzinger_after_2006}]
+\end{description}
+
+\subsubsection{Second-generation Cognitivism}
+
+Common labels: embodied, embedded, extended, enacted, distributed,
+situated cognition; the extended mind, the social brain, etc.:
+
+\begin{description}
+\item [\cite{adams_embodied_2010}]
+\item [\cite{cash_cognition_2013}]
+\item [\cite{clark_being_1997}]
+\item [\cite{clark_extended_1998}]  The original ``extended mind'' article.
+\item [\cite{dunbar_social_1998}]
+\item [\cite{ignatow_theories_2007}]
+\item [\cite{kono_extended_2010}]
+\item [\cite{leidlmair_after_2009}]  A collection of papers dealing with the reassessment of thinking in Cognitive Science and in Philosophy today, with special emphasis on embodied and embedded cognition.
+\item [\cite{varela_embodied_1992}]
+\item [\cite{walter_situated_2013}]  A very readable overview of first and second generation cognitivism.
+\item [\cite{wilson_six_2002}]
+\end{description}
+
+\subsection{Pragmatism and the Social Sciences}
+\begin{description}
+\item [\cite{baert_towards_2005}]
+\item [\cite{baert_philosophy_2005}]
+\item [\cite{emirbayer_pragmatism_2010}]
+\item [\cite{kivinen_relevance_2004}]
+\item [\cite{kivinen_sociologizing_2007}]
+\item [\cite{wolfe_pragmatic_revival_1998}]
+\end{description}
+
+\subsection{Major Figures}
+\subsubsection{Robert Brandom}
+\begin{description}
+\item [\cite*{brandom_mie}]  His \textit{magnum opus}.
+\item [\cite*{brandom_articulating_2001}] A much shorter summary of the key ideas in MIE.
+\item [\cite*{brandom_perspectives_2011}]
+\item [\cite*{brandom_classical_2011}]
+\item [\cite*{brandom_analyzing_2011}]
+\end{description}
+
+\subsubsection{Donald Davidson}
+\begin{description}
+\item [\cite*{davidson_nice_2005}] ``There is no such a thing as a
+  language, not if a language is anything like what many philosophers
+  and linguists have supposed.''
+\end{description}
+
+\subsubsection{Huw Price}
+
+Price started out as a philosopher of science.  In recent years he has
+focused on the problems of naturalism, expressivism, etc.  He is
+associated with:
+
+\begin{itemize}
+\item Global expressivism
+\item Subject naturalism
+\item Causal perspectivism
+\end{itemize}
+
+\begin{description}
+\item [\cite*{price_expressivism_2013}]
+\item [\cite*{price_naturalism_2013}]
+\item [\cite*{price_pluralism_2013}]
+\end{description}
+
+\subsubsection{Hilary Putnam}
+\begin{description}
+\item [\cite*{putnam_meaning_1975}] Contains Putnam's famous
+  ``twin-earth'' thought experiment, and his famous conclusion
+  ``meanings just ain't in the head''.
+\item [\cite*{putnam_pragmatism_1995}]
+\end{description}
+
+\subsubsection{Willard Van Orman Quine}
+\begin{description}
+\item [\cite*{quine_two_1951}]  Quine's celebrated demolition of the distinction between analytic and synthetic sentences.  A must-read.
+\item [\cite*{quine_word_1960}] Chapter 2, \textit{Translation and
+  Meaning}, introduces the famous \textit{gavagai}.
+\end{description}
+
+\subsubsection{Richard Rorty}
+\begin{description}
+\item [\cite*{rorty_pmn}]
+\item [\cite*{rorty_method_1981}]
+\item [\cite*{rorty_representation_1988}]
+\end{description}
+
+
+\subsubsection{Wilfrid Sellars}
+\begin{description}
+\item [\cite*{sellars_empiricism_1997}]  Sellars' celebrated attack on the ``Myth of the Given''.  A must-read.
+\end{description}
+
+\subsubsection{Ludwig Wittgenstein}
+\begin{description}
+\item [\cite*{wittgenstein_philosophical_2009}]
+\end{description}
+
+%%%%%%%%%%%%%%%%
 \section{Bibliography}
 %% \addcontentsline{toc}{chapter}{Bibliography}
 %% \bibliographystyle{plainnat}
